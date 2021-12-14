@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #7eb7ef;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.font {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.navbar {
+  text-align: center;
+  background-color: #000000c4;
+  color: white;
+  padding: 10px 0 10px 0;
+  font-size: 20px;
+  width: 100%;
+}
+
+.addTask {
+  background-color: mediumaquamarine;
+  width: 50%;
+  height: 100px;
+  border-radius: 10px;
+  margin-top: 25px;
+   /* text-align: center; */
+}
+
+#taskname{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.4rem;
+}
+
+#tasks {
+  word-break: break-all;
+  padding: 8px;
+}
+
+input {
+    width: 60%;
+    border-style: none;
+    padding: 10px 13px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+.addBtn {
+    width: 70px;
+    border-radius: 10px;
+    padding: 9px 13px;
+    border-style: none;
+    margin-left: 5px;
+    outline: none;
+}
+
+.addBtn p {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.delete {
+    background-color: DodgerBlue;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.delete:hover{
+    background-color: RoyalBlue;
+}
+
+.container {
+  width: 50%;
+  min-height: 50px;
+  background-color: rgb(214 214 232);
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-bottom: 20vh;
+  overflow: break-word;
+}
+
+footer {
+  background-color: #66cdaa;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+}
