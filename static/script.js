@@ -33,7 +33,7 @@ function push() {
         </div>
         `;
     
-    document.querySelector(".addTask input").value = " ";
+    document.querySelector(".addTask input").value = null;
 
 // Delete Todo code
 
