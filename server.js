@@ -24,14 +24,54 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
+const mongoose = require('mongoose');
+const { json } = require('express/lib/response');
+
+app.use(express.urlencoded())
+
+// Connected to the DataBase.
+mongoose.connect('mongodb://localhost/myToDoApp'); 
+
+// Create mongoose schema
+const add = new mongoose.Schema({
+    task: String,
+    id: Number
+});
+
+// Creating schema into model
+const toDo = mongoose.model('toDo', add);
 
 app.use('/', express.static(path.resolve(__dirname, 'static')))
 
-console.log(__dirname)
+// console.log(__dirname)
 
-// app.get('/', (req,res) => {
-//     res.sendFile(path.join(__dirname, 'index.html'))
-// });
+let idCounter = 0
+
+app.post('/add', (req, res) => {
+    let idValue = Math.random() * (idCounter + 1)
+
+    let gettoDo = new toDo({
+        task: req.body.task,
+        id: idValue
+    });
+    gettoDo.save()
+
+    idCounter = idCounter + 1;
+    // console.log(getTask)
+    res.status(204).redirect('/')
+})
+
+app.get('/tasks', async (req, res) => {
+    let data = await toDo.find()
+    // console.log(data)
+    res.json(data)
+})
+
+app.post('/delete', async (req, res) => {
+    console.log(req.body)
+    await toDo.deleteOne(req.body)
+    res.status(204).redirect('/')
+})
 
 app.listen(port, () => {
     console.log(`This app is listening at http://localhost:${port}`)

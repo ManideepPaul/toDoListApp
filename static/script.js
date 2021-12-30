@@ -6,44 +6,39 @@ content = document.querySelector(".add");
 
 content.addEventListener("keyup", function (event) {
   if (event.keyCode === 13) {
-    return push();
+    push();
   }
 });
 
 // Function to enter the ToDO work and to delete. But If the input is empty then throw an alert.
 
 function push() {
-
-// Alert statement
-
+  
+  // Alert statement
+  
   if (content.value.length == 0) {
     alert("Type content to add");
-  } else {
-
-// ToDo input code
-
-    document.querySelector("#tasks").innerHTML += `
-        <div class="task">
-        <span id="taskname">
-        ${document.querySelector(".addTask input").value}
-        </span>
-        <button class="delete" >
-        <i class="fa fa-trash"></i>
-        </button>
-        </div>
-        `;
-    
-    document.querySelector(".addTask input").value = null;
-
-// Delete Todo code
-
-    allTask = document.querySelectorAll(".delete");
-    // console.log(allTask)
-    for (i = 0; i < allTask.length; i++) {
-      //   console.log(allTask[i]);
-      allTask[i].onclick = function () {
-        this.parentNode.remove();
-      };
     }
   }
-}
+
+  async function reload() {
+    const record = await fetch ('/tasks')
+    .then( res => res.json());
+    record.forEach(({task, id}) => {
+      document.getElementById('tasks').innerHTML += `
+      <form action="/delete" method="post">
+      <div class="task">
+      <input type="hidden" name="id" value="${id}"/>
+      <span class="taskname">
+      ${task}
+      </span>
+      <button class="delete" type="submit">
+      <i class="fa fa-trash"></i>
+      </button>
+      </div>
+      </form>
+      `  
+    });
+  }
+
+  reload()

@@ -39,7 +39,7 @@ body {
    /* text-align: center; */
 }
 
-#taskname{
+.taskname{
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.4rem;
 }
