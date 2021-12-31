@@ -29,8 +29,11 @@ const { json } = require('express/lib/response');
 
 app.use(express.urlencoded())
 
-// Connected to the DataBase.
-mongoose.connect('mongodb://localhost/myToDoApp'); 
+// For mongodb atlas connection
+
+const uri = "mongodb+srv://mandytim:t841301@todoapp.gmqdx.mongodb.net/ToDoApp?retryWrites=true&w=majority"
+
+mongoose.connect(uri); 
 
 // Create mongoose schema
 const add = new mongoose.Schema({
