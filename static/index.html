@@ -12,15 +12,17 @@
 </head>
 <body>
     <nav class="navbar center font"><h2>Welcome to my To Do List app</h2></nav>
-    <div>
-        <form class="addTask center" action="add" method="POST">
-            <input class="add" type="text" name="task" placeholder="Type to add the task.." required>
-            <button type="submit" class="addBtn" onclick="push()"><p class="font p1">Add</p></button>
-        </form>
-    </div>
-    <div class="container center">
-            <div id="tasks"></div>
-    </div>
+    <section>
+        <div>
+            <form class="addTask center" action="add" method="POST">
+                <input class="add" type="text" name="task" placeholder="Type to add the task.." required>
+                <button type="submit" class="addBtn" onclick="push()"><p class="font p1">Add</p></button>
+            </form>
+        </div>
+        <div class="container center">
+                <div id="tasks"></div>
+        </div>
+    </section>
     <footer class="font">
         <p>Copyright &copy; 2021 - www.webdevman.co.in - All right reserved</p>
     </footer>

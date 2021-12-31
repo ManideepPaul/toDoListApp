@@ -8,6 +8,12 @@
 
 body {
   background-color: #7eb7ef;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+section {
+  flex-grow: 2;
 }
 
 .center {
@@ -28,6 +34,7 @@ body {
   padding: 10px 0 10px 0;
   font-size: 20px;
   width: 100%;
+  flex-shrink: 0;
 }
 
 .addTask {
@@ -93,17 +100,14 @@ input {
   background-color: rgb(214 214 232);
   border-radius: 10px;
   margin-top: 25px;
-  margin-bottom: 20vh;
+  margin-bottom: 25px;
   overflow: break-word;
 }
 
 footer {
   background-color: #66cdaa;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   text-align: center;
   padding: 10px;
   font-size: 15px;
+  flex-shrink: 0;
 }
