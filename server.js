@@ -176,7 +176,7 @@ app.get('/tasks', async (req, res) => {
 app.post('/delete', async (req, res) => {
     console.log(req.body)
     await toDo.deleteOne(req.body)
-    res.status(204).redirect('/home.html')
+    res.status(204).redirect('../home/home.html')
 })
 
 app.listen(port, () => {
