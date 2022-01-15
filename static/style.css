@@ -16,6 +16,30 @@ section {
   flex-grow: 2;
 }
 
+.welcomePage {
+  flex-direction: column;
+  /* flex-grow: 2; */
+  font-size: 1.8rem;
+  background-color: blanchedalmond;
+  border: 2px black;
+  padding: 20px;
+  border-radius: 13px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+li > a {
+  color: white;
+}
+
+
+div > h1,h3,h4{
+  padding: 7px 0
+}
+
 .center {
   display: flex;
   align-items: center;
@@ -29,12 +53,27 @@ section {
 
 .navbar {
   text-align: center;
+  height: 30px;
   background-color: #000000c4;
   color: white;
   padding: 10px 0 10px 0;
   font-size: 20px;
   width: 100%;
   flex-shrink: 0;
+  position: relative;
+}
+
+.userList {
+  display: flex;
+  position: absolute;
+  list-style: none;
+  right: 0;
+}
+
+
+.userList li {
+  margin-right: 15px;
+  color: white;
 }
 
 .addTask {
@@ -110,4 +149,17 @@ footer {
   padding: 10px;
   font-size: 15px;
   flex-shrink: 0;
+}
+
+.login {
+  min-height: 500px;
+}
+
+.loginForm {
+  flex-direction: column;
+}
+
+.loginForm input {
+  margin-top: 10px;
+  min-width: 250px;
 }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar center font">
+        <h2>Welcome to my To Do List app</h2>
+        <ul class="userList">
+            <li><a href="../login/login.html">Login</a></li>
+            <li><a href="../signup/signup.html">Sign Up</a></li>
+            <li><a href="../change-password/change-password.html">Change Your Password</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div>
+            <form class="addTask center" id="addTask">
+                <input class="add" id="task" type="text" name="task" placeholder="Type to add the task.." required>
+                <button type="submit" class="addBtn"><p class="font p1">Add</p></button>
+            </form>
+        </div>
+        <div class="container center">
+            <div id="tasks"></div>
+        </div>
+    </section>
+    <footer class="font">
+        <p>Copyright &copy; 2021 - www.webdevman.co.in - All right reserved</p>
+    </footer>  
+    <script src="./home.js"></script>
+</body>
+</html>

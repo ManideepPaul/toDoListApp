@@ -4,28 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./responsive.css">
-    <script defer src="./script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Welcome Page</title>
 </head>
 <body>
-    <nav class="navbar center font"><h2>Welcome to my To Do List app</h2></nav>
-    <section>
-        <div>
-            <form class="addTask center" action="add" method="POST">
-                <input class="add" type="text" name="task" placeholder="Type to add the task.." required>
-                <button type="submit" class="addBtn" onclick="push()"><p class="font p1">Add</p></button>
-            </form>
-        </div>
-        <div class="container center">
-                <div id="tasks"></div>
+    <nav class="navbar center font">
+        <!-- <h2>Welcome to my To Do List app</h2> -->
+        <!-- <ul class="userList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul> -->
+    </nav>
+    <section class="center">
+        <div class="welcomePage font center">
+            <h1>Welcome to my TO-DO-LIST app</h1>
+            <h3> <a href="./login/login.html">Login</a>&nbsp; OR &nbsp;<a href="./signup/signup.html"> Sign Up</a> </h3>
+            <h4>to continue...</h4>
         </div>
     </section>
     <footer class="font">
         <p>Copyright &copy; 2021 - www.webdevman.co.in - All right reserved</p>
     </footer>
-
+    <script src="./login.js"></script>
 </body>
 </html>
