@@ -1,3 +1,4 @@
+
 const addTask = document.getElementById('addTask');
 
 addTask.addEventListener('submit', tasks)
@@ -22,6 +23,14 @@ async function tasks(event) {
     })
   }).then((res) => res.json())
 
+}
+
+const logout = document.getElementById('logOut')
+logout.addEventListener('click', remove);
+
+function remove () {
+  localStorage.clear();
+  window.location.assign('../login/login.html')
 }
  
 
