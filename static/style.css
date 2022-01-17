@@ -53,7 +53,7 @@ div > h1,h3,h4{
 
 .navbar {
   text-align: center;
-  height: 30px;
+  min-height: 30px;
   background-color: #000000c4;
   color: white;
   padding: 10px 0 10px 0;
