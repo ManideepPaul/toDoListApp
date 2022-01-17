@@ -1,6 +1,20 @@
 /* body{
     background-color: white;
 } */
+@media only screen and ( max-width: 1200px){
+    .navbar {
+        display: inline-block;
+    }
+
+    .userList {
+        display: block;
+        position: relative;
+    }
+
+    .navbar > ul > li {
+        margin: 5px 0;
+    }
+}
 
 @media only screen and ( max-width: 900px){
     .addTask {
